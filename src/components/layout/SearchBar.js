@@ -3,19 +3,33 @@ import { Redirect, Link } from "react-router-dom";
 
 import "./SearchBar.css";
 
+import Spinner from "./Spinner";
+
 const SearchBar = () => {
   const [search, setSearch] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState("");
 
   useEffect(() => {
-    search && window.location.reload();
-  }, [search]);
+    setSearch(false);
+    setLoading(false);
+  }, []);
+
+  useEffect(() => {
+    if (search && formData !== "" && formData !== undefined) {
+      setLoading(true);
+      setTimeout(function () {
+        setLoading(false);
+      }, 1500);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [formData]);
 
   const handleSearch = (e) => {
     e.preventDefault();
 
     if (formData !== "" && formData !== undefined) {
-      console.log(formData);
+      setLoading(false);
       setSearch(true);
     }
   };
@@ -44,6 +58,7 @@ const SearchBar = () => {
           Submit
         </button>
       </form>
+      <Fragment>{loading ? <Spinner /> : null}</Fragment>
       {search && <Redirect to={{ pathname: "/search", state: { formData } }} />}
     </Fragment>
   );

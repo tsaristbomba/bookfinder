@@ -14,11 +14,9 @@ const Search = ({
   const [queryData, setData] = useState(null);
 
   useEffect(() => {
-    console.log(formData);
-
     queryResult();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [formData]);
 
   const queryResult = async () => {
     const res = await axios.get(
