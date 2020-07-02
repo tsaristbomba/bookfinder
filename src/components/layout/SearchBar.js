@@ -55,7 +55,7 @@ const SearchBar = () => {
           onChange={(e) => handleChange(e)}
         />
         <button className="btn submit" type="submit">
-          Submit
+          Search
         </button>
       </form>
       <Fragment>{loading ? <Spinner /> : null}</Fragment>
