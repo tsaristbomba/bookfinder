@@ -1,0 +1,64 @@
+.search {
+  width: 100vw;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.book {
+  margin: 40px 20px;
+  min-height: 200px;
+  max-width: 200px;
+}
+
+.books {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 960px;
+  text-align: center;
+}
+
+.bar {
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.book-img {
+  height: 200px;
+}
+
+.book-title {
+  text-decoration: none;
+  color: black;
+}
+
+p {
+  font-size: 15px;
+}
+
+.book-title:hover {
+  color: indianred;
+}
+
+@media screen and (max-width: 1020px) {
+  .books {
+    width: 720px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .books {
+    width: 480px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .books {
+    width: 200px;
+  }
+}

@@ -1,0 +1,54 @@
+.search-input {
+  padding: 9px;
+  width: 350px;
+  border: 1px solid indianred;
+  border-radius: 3px 0px 0px 3px;
+}
+
+.search-input:focus {
+  border-color: black;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: 0;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.submit {
+  border-radius: 0px 3px 3px 0px;
+  background-color: indianred;
+}
+
+.submit:hover {
+  background-color: tomato;
+}
+
+.title {
+  color: indianred;
+  margin-top: 0;
+  font-size: 40px;
+  margin-top: 0;
+}
+
+span {
+  color: black;
+}
+
+.title-link {
+  text-decoration: none;
+  color: indianred;
+}
+
+@media screen and (max-width: 500px) {
+  .btn {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .title {
+    font-size: 30px;
+  }
+}
